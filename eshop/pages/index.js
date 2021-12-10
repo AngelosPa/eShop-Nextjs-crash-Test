@@ -4,7 +4,6 @@ import styles from '../styles/Layout.module.css'
 
 export default function Home({items}) {
  
-  console.log()
   return (
     <div>
       <Head>

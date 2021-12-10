@@ -30,8 +30,18 @@
       "target": "plugin::users-permissions.user",
       "inversedBy": "posts"
     },
-    "price": {
-      "type": "string"
+    "photo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ]
+    },
+    "Price": {
+      "type": "integer"
     }
   }
 }

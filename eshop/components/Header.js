@@ -1,6 +1,5 @@
 import React from "react";
-import styles from "../styles/Layout.module.css";
-import Nav from "./Nav";
+
 import headerStyles from "../styles/Header.module.css";
 const Header = () => {
     let x=3;

@@ -7,18 +7,23 @@ const Nav = () => {
     <nav className={navStyles.nav}>
       <ul className={navStyles.navList}>
         <li className={navStyles.navItem}>
-          <Link href="/" className={navStyles.navLink}>
-            Home
+          <Link  href="/" >
+          <a  className={navStyles.navLink} >Home</a> 
           </Link>
         </li>
         <li className={navStyles.navItem}>
-          <Link href="/shop" className={navStyles.navLink}>
-          Shop
+          <Link  href="/shop" className={navStyles.navLink}>
+          <a  className={navStyles.navLink} >Shop</a> 
           </Link>
         </li>
         <li className={navStyles.navItem}>
           <Link href="/deliever" className={navStyles.navLink}>
-            We deliever to:
+            <a  className={navStyles.navLink} > We deliever to:</a> 
+          </Link>
+        </li>
+        <li className={navStyles.navItem}>
+          <Link href="/submitlist" className={navStyles.navLink}>
+             <a  className={navStyles.navLink} >Post a Product</a> 
           </Link>
         </li>
       </ul>
