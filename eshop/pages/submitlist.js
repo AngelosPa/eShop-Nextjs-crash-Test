@@ -6,24 +6,24 @@ const ADD_TODO = gql`
     $text: String!
     $description: String!
     $Price: Int!
-   $deliverable: Boolean!
-   $publishedAt: DateTime!
+    $deliverable: Boolean!
+    $publishedAt: DateTime!
+  ) {
+    createPost(
+      data: {
+        title: $text
+        description: $description
+        deliverable: $deliverable
+        Price: $Price
+        publishedAt: $publishedAt
+      }
     ) {
-    createPost(data: { 
-      title: $text
-      description:$description
-      deliverable:$deliverable
-      Price:$Price
-      publishedAt:$publishedAt
-      }) {
       data {
         attributes {
           title
           description
           deliverable
           Price
-          
-
         }
       }
     }
@@ -46,7 +46,6 @@ export default function submitlist() {
 
   return (
     <div>
- 
       <form
         onSubmit={(e) => {
           e.preventDefault();
@@ -61,7 +60,7 @@ export default function submitlist() {
               description: description,
               deliverable: deliverable,
               Price: price,
-              publishedAt: new Date()
+              publishedAt: new Date(),
             },
           });
           // input.value = '';
@@ -84,18 +83,17 @@ export default function submitlist() {
         />
         <br />
         <select
-            id="deliverable"
-            onChange={(e) => {
-              setDeliverable(!!e.target.value);
-            }}
-          >
-            
-            <option value={true}> deliverable </option>
-            <option value={false}>not deliverable </option>
-           
-            </select>
+          id="deliverable"
+          onChange={(e) => {
+            setDeliverable(!!e.target.value);
+          }}
+        >
+          <option value={true}> deliverable </option>
+          <option value={false}>not deliverable </option>
+        </select>
 
         <br />
+        <p>price:</p>
         <input
           type="number"
           value={price}
